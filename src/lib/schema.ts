@@ -7,5 +7,10 @@ export const SignupSchema = z.object({
     .string()
     .min(1, "This field required")
     .email("Enter e valid email address"),
-  password: z.string().min(1, "This field required"),
+  password: z.string().min(8, "Password must contain more than 7 characters"),
+});
+
+export const SigninSchema = SignupSchema.omit({
+  firstname: true,
+  lastname: true,
 });

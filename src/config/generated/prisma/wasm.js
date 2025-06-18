@@ -126,6 +126,23 @@ exports.Prisma.UserScalarFieldEnum = {
   email: 'email',
   password: 'password',
   provider: 'provider',
+  avatar: 'avatar',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ConversationScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.MessageScalarFieldEnum = {
+  id: 'id',
+  role: 'role',
+  text: 'text',
+  conversationId: 'conversationId',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -147,7 +164,9 @@ exports.Prisma.NullsOrder = {
 
 
 exports.Prisma.ModelName = {
-  User: 'User'
+  User: 'User',
+  Conversation: 'Conversation',
+  Message: 'Message'
 };
 
 /**

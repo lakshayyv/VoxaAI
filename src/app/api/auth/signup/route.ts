@@ -16,7 +16,7 @@ export const POST = async (req: NextRequest) => {
     });
 
     return NextResponse.json({
-      message: "Signup successful",
+      message: "Sign up successful",
       data: response,
     });
   } catch (error) {
