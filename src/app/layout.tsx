@@ -12,6 +12,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "VoxaAI",
   description: "Voice spoken ai chatbot",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

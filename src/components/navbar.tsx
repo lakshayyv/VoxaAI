@@ -42,11 +42,13 @@ export default function AppNavbar() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary" href="/auth/signin">Login</NavbarButton>
+            <NavbarButton variant="secondary" href="/auth/signin">
+              Login
+            </NavbarButton>
             <NavbarButton
               href="/auth/signup"
               variant="primary"
-              className="bg-orange-500 text-white"
+              className="bg-orange-500 text-white rounded-full"
             >
               Get Started
             </NavbarButton>
@@ -88,11 +90,12 @@ export default function AppNavbar() {
                 Login
               </NavbarButton>
               <NavbarButton
+                href="/auth/signup"
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
-                className="w-full"
+                className="w-full bg-orange-500 text-white rounded-full"
               >
-                Book a call
+                Get started
               </NavbarButton>
             </div>
           </MobileNavMenu>

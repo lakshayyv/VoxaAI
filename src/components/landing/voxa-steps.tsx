@@ -67,16 +67,16 @@ export default function VoxaSteps() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="w-full shadow-xl rounded-lg"
+              className="w-full shadow-xl rounded-lg overflow-hidden"
             >
-              <Image
-                src={items[turn - 1].src}
-                alt={items[turn - 1].title}
-                width={0}
-                height={0}
-                sizes="1"
-                className="w-full rounded-lg"
-              />
+              <div className="relative w-full aspect-[16/9]">
+                <Image
+                  src={items[turn - 1].src}
+                  alt={items[turn - 1].title}
+                  fill
+                  className="object-contain rounded-lg"
+                />
+              </div>
             </motion.div>
           </AnimatePresence>
         </motion.div>
