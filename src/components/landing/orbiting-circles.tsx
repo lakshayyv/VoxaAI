@@ -1,9 +1,9 @@
 import { OrbitingCircles } from "@/components/ui/orbiting-circles";
 import Image from "next/image";
 
-export function OrbitingCirclesDemo() {
+export function OrbitingCirclesCardComp() {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
+    <div className="relative flex h-[300px] md:h-[500px] w-full flex-col items-center justify-center overflow-hidden">
       <OrbitingCircles iconSize={40}>
         <Icons.openai />
         <Icons.nextjs />

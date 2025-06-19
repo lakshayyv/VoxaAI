@@ -1,26 +1,31 @@
 "use client";
 
-import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
-import { ContainerScroll } from "@/components/ui/container-scroll-animation";
-import Magnet from "@/components/ui/magnet";
-import AppNavbar from "@/components/ui/navbar";
-import { Navbar } from "@/components/ui/resizable-navbar";
-import Threads from "@/components/ui/threads";
-import { ArrowUpRight, MoveUpRight } from "lucide-react";
-import Image from "next/image";
-
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Home, Search, ArrowLeft, Bot, Zap } from "lucide-react";
-import Link from "next/link";
 import HeroSection from "@/components/landing/hero-section";
 import HowItWorks from "@/components/landing/how-it-works";
+import VoxaSteps from "@/components/landing/voxa-steps";
+import FAQs from "@/components/landing/faqs";
+import CTA from "@/components/landing/CTA";
+import Footer from "@/components/landing/footer";
+import AppNavbar from "@/components/navbar";
 
 export default function Page() {
   return (
-    <div className="w-full">
-      <HeroSection />
-      <HowItWorks />
+    <div className="overflow-x-hidden md:overflow-x-auto w-full">
+      <AppNavbar />
+      <section id="home">
+        <HeroSection />
+      </section>
+      <section id="features">
+        <HowItWorks />
+      </section>
+      <section id="how-it-works">
+        <VoxaSteps />
+      </section>
+      <section id="faqs">
+        <FAQs />
+      </section>
+      <CTA />
+      <Footer />
     </div>
   );
 }

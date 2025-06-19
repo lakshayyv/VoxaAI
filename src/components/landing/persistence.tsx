@@ -7,7 +7,7 @@ export function Persistence() {
   const texts = ["Persistence", "Continuity", "Retention"];
 
   return (
-    <div className="relative flex h-[250px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-transparent">
+    <div className="relative flex h-[250px] md:w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-transparent">
       <MorphingText texts={texts} />
       <Ripple
         mainCircleOpacity={0.5}

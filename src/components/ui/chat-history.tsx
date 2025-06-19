@@ -51,7 +51,7 @@ export default function ChatHistory({
     setLoading(false);
   };
   return (
-    <div className="w-1/2 h-full p-5 border border-orange-500">
+    <div className="md:w-1/2 h-full p-5 border border-orange-500">
       <h1 className="text-orange-600 font-semibold text-xl">Chat History</h1>
       <Separator className="bg-orange-500 mt-4" />
       {transcript.length <= 0 ? (

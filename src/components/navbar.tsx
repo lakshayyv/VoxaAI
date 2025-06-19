@@ -11,39 +11,48 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 export default function AppNavbar() {
   const navItems = [
     {
+      name: "Home",
+      link: "home",
+    },
+    {
       name: "Features",
-      link: "#features",
+      link: "features",
     },
     {
-      name: "Pricing",
-      link: "#pricing",
+      name: "How It Works",
+      link: "how-it-works",
     },
     {
-      name: "Contact",
-      link: "#contact",
+      name: "FAQs",
+      link: "faqs",
     },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="relative w-full">
+    <div className="fixed top-5 left-0 z-50 w-full bg-trasparent dark:bg-black">
       <Navbar>
-        {/* Desktop Navigation */}
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Login</NavbarButton>
-            <NavbarButton variant="primary">Book a call</NavbarButton>
+            <NavbarButton variant="secondary" href="/auth/signin">Login</NavbarButton>
+            <NavbarButton
+              href="/auth/signup"
+              variant="primary"
+              className="bg-orange-500 text-white"
+            >
+              Get Started
+            </NavbarButton>
           </div>
         </NavBody>
 
-        {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader>
             <NavbarLogo />
@@ -58,14 +67,17 @@ export default function AppNavbar() {
             onClose={() => setIsMobileMenuOpen(false)}
           >
             {navItems.map((item, idx) => (
-              <a
+              <Link
                 key={`mobile-link-${idx}`}
-                href={item.link}
+                to={item.link}
+                smooth={true}
+                offset={-120}
+                duration={500}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="relative text-neutral-600 dark:text-neutral-300"
               >
                 <span className="block">{item.name}</span>
-              </a>
+              </Link>
             ))}
             <div className="flex w-full flex-col gap-4">
               <NavbarButton

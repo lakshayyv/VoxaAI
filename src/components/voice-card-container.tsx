@@ -24,8 +24,8 @@ export default function VoiceCardContainer({ session }: { session: Session }) {
   }
 
   return (
-    <div className="flex items-center h-full p-5 space-x-5">
-      <div className="relative w-1/2 h-full flex flex-col items-center justify-center space-y-5">
+    <div className="space-y-5 md:space-y-0 md:flex items-center h-full p-5 md:space-x-5">
+      <div className="relative md:w-1/2 h-full flex flex-col items-center justify-center space-y-5">
         <VoiceCard
           name="Voxa"
           src="/voxa-ai-logo.svg"

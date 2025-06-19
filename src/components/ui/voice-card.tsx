@@ -11,7 +11,7 @@ export default function VoiceCard({ name, src, speaking }: VoiceCardProps) {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 40 }}
         transition={{ duration: 0.6, type: "spring", stiffness: 120 }}
-        className="relative w-full h-full bg-neutral-100 shadow-lg rounded-2xl p-6 border border-orange-100 flex flex-col items-center justify-center text-center overflow-hidden"
+        className="relative w-full md:h-full bg-neutral-100 shadow-lg rounded-2xl p-6 border border-orange-100 flex flex-col items-center justify-center text-center overflow-hidden"
       >
         <div className="relative">
           {speaking && (

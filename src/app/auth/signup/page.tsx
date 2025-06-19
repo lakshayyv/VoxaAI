@@ -66,7 +66,7 @@ export default function Page() {
 
   return (
     <>
-      <div className="w-1/2 flex items-center justify-center pb-7">
+      <div className="hidden w-1/2 md:flex items-center justify-center pb-7">
         <Image
           src="/voxa-ai-signup.png"
           alt="signup-image"
@@ -75,7 +75,7 @@ export default function Page() {
           priority
         />
       </div>
-      <div className="w-1/2 min-h-screen space-y-7 flex flex-col justify-center items-center">
+      <div className="px-5 md:px-0 md:w-1/2 min-h-screen space-y-7 flex flex-col justify-center items-center">
         <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white md:rounded-2xl dark:bg-black">
           <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
             Welcome to <span className="text-primary">Voxa</span>
