@@ -15,7 +15,7 @@ export default function HeroSection() {
   return (
     <motion.div className="w-full flex flex-col overflow-hidden md:h-[100rem]">
       {mobile ? (
-        <div className="relative w-full h-screen overflow-hidden bg-white">
+        <div className="-mt-16 relative w-full h-screen overflow-hidden bg-white">
           <div className="absolute inset-0 z-0">
             <Threads />
             <div className="absolute inset-0 backdrop-blur-sm pointer-events-none" />
@@ -64,6 +64,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
+                onClick={() => router.push("/auth/signup")}
               >
                 <InteractiveHoverButton>Start Talking</InteractiveHoverButton>
               </motion.div>

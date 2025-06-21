@@ -84,6 +84,7 @@ export default function AppNavbar() {
             <div className="flex w-full flex-col gap-4">
               <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
+                href="/auth/signin"
                 variant="primary"
                 className="w-full"
               >
